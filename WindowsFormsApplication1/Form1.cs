@@ -12,6 +12,10 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        private bool CancelEdit = false;
+        private ListViewItem.ListViewSubItem CurrentSubItem = default(ListViewItem.ListViewSubItem);
+        private ListViewItem CurrentItem = default(ListViewItem);
+
         public Form1()
         {
             InitializeComponent();
@@ -29,10 +33,6 @@ namespace WindowsFormsApplication1
                 lvTable.Items.Add(lvi);
             }
         }
-        
-        bool CancelEdit = false;
-        ListViewItem.ListViewSubItem CurrentSubItem = default(ListViewItem.ListViewSubItem);
-        ListViewItem CurrentItem = default(ListViewItem);
 
         private void lvTable_MouseDoubleClick(object sender, MouseEventArgs e)
         {
